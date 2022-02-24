@@ -1,0 +1,47 @@
+{
+  "name": "yaml-schema",
+  "version": "1.0.0",
+  "description": "YAML document schema validator and transformer",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "eslint --ext .ts src",
+    "test": "npm run lint && mocha",
+    "esm": "gen-esm-wrapper . ./dist/index.mjs",
+    "build": "rimraf dist && tsc && npm run esm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Azusfin/yaml-schema.git"
+  },
+  "keywords": [
+    "yaml",
+    "schema",
+    "yaml-document",
+    "yaml-schema-validator",
+    "yaml-validator"
+  ],
+  "author": "azusfin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Azusfin/yaml-schema/issues"
+  },
+  "homepage": "https://github.com/Azusfin/yaml-schema#readme",
+  "devDependencies": {
+    "@hazmi35/eslint-config": "^8.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "eslint": "^8.7.0",
+    "gen-esm-wrapper": "^1.1.3",
+    "mocha": "^9.1.4",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "yaml": "^2.0.0-10"
+  }
+}
