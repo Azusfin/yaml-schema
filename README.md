@@ -37,7 +37,7 @@ yaml.parse(yamlString)
 ## Schema
 ```js
 const yaml = new YAML({
-    type: schemaType
+    type: schemaType,
     default?: defaultValue
 })
 ```
