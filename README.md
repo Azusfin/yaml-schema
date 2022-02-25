@@ -9,7 +9,7 @@
 import { readFileSync } from "node:fs"
 import { YAML } from "yaml-schema"
 
-const configFile = readFIleSync("config.yml", "utf-8")
+const configFile = readFileSync("config.yml", "utf-8")
 
 const yaml = new YAML({
     type: "object",
@@ -18,7 +18,7 @@ const yaml = new YAML({
             type: "string"
         },
         token: {
-            type: "string
+            type: "string"
         }
     }
 })
